@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WIN WINS IMPEX — Premium Export Knitwear Manufacturer | Tirupur, India</title>
+  <meta name="description" content="Established in 2004 in Tirupur, India. SEDEX, SMETA 4-Pillar & Disney FAMA Certified knitwear manufacturer with 200,000 pcs/month capacity across 50,000 sq. ft." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f7f6f2',
+              100: '#eceae2',
+              200: '#d8d3c4',
+              500: '#8c7a5b',
+              600: '#736246',
+              800: '#1c2421',
+              900: '#0f1513',
+              gold: '#c5a059',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Subtle custom scrollbars & transitions */
+    .weft-pattern {
+      background-image: radial-gradient(rgba(197, 160, 89, 0.14) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .card-zoom:hover img {
+      transform: scale(1.06);
+    }
+
+    /* ==========================================================================
+       GENTLE SMOOTH SCROLL & BIDIRECTIONAL FADE-IN / FADE-OUT EFFECTS
+       ========================================================================== */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Scroll offset for sticky header */
+    section[id], header[id] {
+      scroll-margin-top: 5.5rem;
+    }
+
+    
+    /* Base Typographic Hierarchy (Target ratio >= 1.25) */
+    h1 { font-size: clamp(2.5rem, 5vw, 4.25rem); line-height: 1.1; }
+    h2 { font-size: clamp(1.875rem, 3.5vw, 2.75rem); line-height: 1.2; }
+    h3 { font-size: 1.5rem; line-height: 1.3; }
+    h4 { font-size: 1.2rem; line-height: 1.4; }
+    /* Top Scroll Progress Bar */
+    #scroll-progress-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, #c5a059, #e0be77, #c5a059);
+      /* Clean metallic hairline indicator */
+      z-index: 9999;
+      pointer-events: none;
+      transition: width 0.15s ease-out;
+    }
+
+    /* Base Gentle Scroll Reveal (Fade In / Fade Out) */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1.15s cubic-bezier(0.16, 1, 0.3, 1), transform 1.15s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal.scroll-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gentle Left / Right Variants */
+    .scroll-reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal-left.scroll-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scroll-reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal-right.scroll-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Gentle Scale Variant */
+    .scroll-reveal-scale {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal-scale.scroll-visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Staggered Children Gentle Fade-In & Fade-Out */
+    .scroll-reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1), transform 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal-stagger.scroll-visible > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gentle Stagger Delays (soft, gradual cascade) */
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(1) { transition-delay: 0.06s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(2) { transition-delay: 0.14s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(3) { transition-delay: 0.22s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(4) { transition-delay: 0.30s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(5) { transition-delay: 0.38s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(6) { transition-delay: 0.46s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(7) { transition-delay: 0.54s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(8) { transition-delay: 0.62s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(9) { transition-delay: 0.70s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(10) { transition-delay: 0.78s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(11) { transition-delay: 0.86s; }
+    .scroll-reveal-stagger.scroll-visible > *:nth-child(12) { transition-delay: 0.94s; }
+
+    /* Floating Badge Gentle Animation */
+    @keyframes gentle-float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-8px) rotate(0.4deg);
+      }
+    }
+
+    .gentle-floating-badge {
+      animation: gentle-float 6s ease-in-out infinite;
+    }
+
+    /* Active Nav link indicator */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link.active {
+      color: #c5a059 !important;
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #c5a059;
+      border-radius: 9999px;
+      transition: width 0.3s ease;
+    }
+
+    /* Back to Top Button */
+    #back-to-top-btn {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(16px);
+      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s, background-color 0.2s;
+    }
+    #back-to-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Accessibility: Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale,
+      .scroll-reveal-stagger > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .gentle-floating-badge {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+  <!-- Gentle Scroll Progress Bar -->
+  <div id="scroll-progress-indicator" aria-hidden="true"></div>
+
+  <!-- TOP ANNOUNCEMENT / CREDENTIALS BAR -->
+  <div class="bg-brand-900 text-brand-100 text-xs py-2.5 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 font-medium text-brand-gold">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          SEDEX Ref: ZS1000040026
+        </span>
+        <span class="hidden sm:inline text-white/30">|</span>
+        <span class="hidden sm:inline">SMETA 4-Pillar Audited &amp; Disney FAMA Certified</span>
+      </div>
+      <div class="flex items-center gap-5 ml-auto">
+        <a href="mailto:jagath@winwinsimpex.com" class="hover:text-brand-gold transition flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-gold"></i>
+          jagath@winwinsimpex.com
+        </a>
+        <a href="tel:+919952222446" class="hover:text-brand-gold transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+          (+91) 99522 22446
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STICKY NAVIGATION HEADER -->
+  <header id="navbar" class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-brand-200/60 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#" class="flex flex-col group">
+        <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-brand-900 group-hover:text-brand-600 transition">
+          WIN WINS IMPEX
+        </span>
+        <span class="text-xs uppercase tracking-[0.25em] text-brand-500 font-semibold -mt-1">
+          Tirupur • Est. 2004
+        </span>
+      </a>
+
+      <!-- Desktop Nav with Smooth ScrollSpy -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-800">
+        <a href="#about" class="nav-link hover:text-brand-gold transition">About &amp; Heritage</a>
+        <a href="#compliance" class="nav-link hover:text-brand-gold transition">Compliance</a>
+        <a href="#collections" class="nav-link hover:text-brand-gold transition">Collections</a>
+        <a href="#fabrics" class="nav-link hover:text-brand-gold transition">Fabric R&amp;D Lab</a>
+        <a href="#leadership" class="nav-link hover:text-brand-gold transition">Leadership</a>
+        <a href="#factory" class="nav-link hover:text-brand-gold transition">Factory Tour</a>
+      </nav>
+
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#contact" class="bg-brand-900 hover:bg-brand-800 text-white text-sm font-semibold px-6 py-3 rounded-full transition shadow-sm hover:shadow flex items-center gap-2">
+          <span>Request Quote / Samples</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-gold"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-brand-900 hover:bg-brand-100">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-200 px-6 py-5 space-y-3">
+      <a href="#about" class="block py-2 text-base font-medium text-brand-900 border-b border-brand-100">About &amp; Heritage</a>
+      <a href="#compliance" class="block py-2 text-base font-medium text-brand-900 border-b border-brand-100">Global Compliance</a>
+      <a href="#collections" class="block py-2 text-base font-medium text-brand-900 border-b border-brand-100">View Our Collections</a>
+      <a href="#fabrics" class="block py-2 text-base font-medium text-brand-900 border-b border-brand-100">Fabric R&amp;D Lab</a>
+      <a href="#leadership" class="block py-2 text-base font-medium text-brand-900 border-b border-brand-100">Leadership</a>
+      <a href="#factory" class="block py-2 text-base font-medium text-brand-900 border-b border-brand-100">Factory Tour</a>
+      <a href="#contact" class="block w-full text-center bg-brand-900 text-white font-semibold py-3 rounded-full mt-4">Contact Export Desk</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[85vh] flex items-center bg-brand-900 text-white overflow-hidden">
+    <!-- Real Hero Image from Original Site -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        id="hero-bg-img"
+        src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/12fe5b28-6dcb-41e9-8763-e7fdca0adc6a/PHOTO-2026-03-26-11-27-28.jpg" 
+        alt="Win Wins Impex Garment Manufacturing Facility" 
+        class="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000 will-change-transform"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/40"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl scroll-reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-brand-gold text-xs uppercase tracking-widest font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+          Export Garments Manufacturer • Tirupur, India
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6">
+          Crafting Premium Knitwear for <span class="text-brand-gold italic font-normal">Global Markets.</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-brand-100/90 leading-relaxed mb-10 max-w-2xl font-light">
+          In a dynamic and ever-evolving textile industry, precision, quality, and adaptability define success. Our commitment to advanced fabrics and refined manufacturing consistently meets global demand with a capacity of <strong class="text-white font-semibold">200,000 pieces per month</strong>.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#collections" class="bg-brand-gold hover:bg-[#b58f46] text-brand-900 font-bold px-8 py-4 rounded-full transition shadow-lg flex items-center gap-2.5">
+            <span>Explore Collections</span>
+            <i data-lucide="layers" class="w-4 h-4"></i>
+          </a>
+          <a href="#factory" class="bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-sm font-semibold px-8 py-4 rounded-full transition flex items-center gap-2.5">
+            <i data-lucide="building-2" class="w-4 h-4 text-brand-gold"></i>
+            <span>Virtual Factory Tour</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE KEY METRICS BAR -->
+  <section class="relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl shadow-xl border border-brand-200/70 p-6 sm:p-10 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-brand-100 scroll-reveal scroll-reveal-stagger">
+      <div class="pt-4 sm:pt-0 first:pt-0">
+        <p class="text-xs uppercase tracking-widest text-brand-500 font-semibold">Established</p>
+        <p class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-1">
+          <span class="counter-val" data-target="2004">2004</span>
+        </p>
+        <p class="text-xs text-gray-500 mt-1">20+ Years in Tirupur Textile Hub</p>
+      </div>
+      <div class="pt-4 sm:pt-0 sm:pl-8">
+        <p class="text-xs uppercase tracking-widest text-brand-500 font-semibold">Monthly Output</p>
+        <p class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-1">
+          <span class="counter-val" data-target="200000" data-format="comma">200,000</span>
+        </p>
+        <p class="text-xs text-gray-500 mt-1">Pieces / Month Export Capacity</p>
+      </div>
+      <div class="pt-4 sm:pt-0 sm:pl-8">
+        <p class="text-xs uppercase tracking-widest text-brand-500 font-semibold">Infrastructure</p>
+        <p class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-1">
+          <span class="counter-val" data-target="50000" data-format="comma">50,000</span> <span class="text-lg font-sans font-normal">sq.ft.</span>
+        </p>
+        <p class="text-xs text-gray-500 mt-1">Grown from 8,000 sq.ft. in 2004</p>
+      </div>
+      <div class="pt-4 sm:pt-0 sm:pl-8">
+        <p class="text-xs uppercase tracking-widest text-brand-500 font-semibold">Global Compliance</p>
+        <p class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-1">
+          <span class="counter-val" data-target="100">100</span>%
+        </p>
+        <p class="text-xs text-gray-500 mt-1">SEDEX, SMETA 4-Pillar &amp; FAMA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT OUR COMPANY SECTION -->
+  <section id="about" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <!-- Image Column -->
+      <div class="lg:col-span-5 relative scroll-reveal-left">
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-brand-200">
+          <img 
+            src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/e65e6d6b-06a5-4166-b444-6e21bdd2ccbe/PHOTO-2026-03-26-11-25-44.jpg" 
+            alt="Win Wins Impex Manufacturing Facility" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <!-- Floating Badge -->
+        <div class="hidden sm:block absolute -bottom-6 -right-6 bg-brand-900 text-white p-6 rounded-2xl shadow-xl max-w-[240px] border border-brand-gold/30 gentle-floating-badge">
+          <p class="font-serif text-xl font-bold text-brand-gold">Family-Run Excellence</p>
+          <p class="text-xs text-brand-100/80 mt-1 leading-relaxed">
+            Two generations of hands-on textile engineering and ethical global trade.
+          </p>
+        </div>
+      </div>
+
+      <!-- Copy Column -->
+      <div class="lg:col-span-7 lg:pl-8 scroll-reveal-right">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">Our Story &amp; Heritage</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-900 mt-2 mb-6 leading-tight">
+          Two Decades of Knitwear Mastery in Tirupur
+        </h2>
+        <div class="space-y-4 text-gray-700 leading-relaxed text-base sm:text-lg">
+          <p>
+            Established in <strong>2004 in Tirupur</strong>—India’s renowned knitwear capital—<strong>Win Wins Impex</strong> has built a distinguished presence in the global apparel supply chain over the past two decades. With deep-rooted expertise in circular knitwear manufacturing, the company continually evolves into advanced fabrics and contemporary silhouettes.
+          </p>
+          <p>
+            A proud family-run enterprise, Win Wins Impex is led by visionary Founder &amp; Managing Director <strong>Mr. Thiagarajan V</strong>, alongside his sons, Managing Partners <strong>Mr. Karthikeyan</strong> and <strong>Mr. Jagath</strong>—uniting decades of foundational wisdom with modern manufacturing innovation.
+          </p>
+          <p>
+            From a modest <strong>8,000 sq. ft.</strong> unit to a fully integrated <strong>50,000 sq. ft.</strong> manufacturing facility, our journey reflects steady growth, uncompromising quality control, and operational excellence.
+          </p>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-brand-200 flex flex-wrap gap-6 items-center">
+          <a href="#factory" class="inline-flex items-center gap-2 text-brand-900 font-bold hover:text-brand-600 transition">
+            <span>Take the Factory Tour</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#leadership" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-900 transition">
+            <span>Read Leadership Messages</span>
+            <i data-lucide="users" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL COMPLIANCE & ETHICAL STANDARDS -->
+  <section id="compliance" class="py-20 bg-white border-y border-brand-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 scroll-reveal">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">Certified &amp; Audited</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-2">
+          Global Compliance &amp; Ethical Standards
+        </h2>
+        <p class="text-gray-600 mt-3">
+          Trusted by international retail brands and license holders for transparent, socially responsible, and audited manufacturing.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 scroll-reveal scroll-reveal-stagger">
+        <!-- SEDEX -->
+        <div class="bg-brand-50 rounded-2xl p-8 border border-brand-200/70 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="h-28 flex items-center justify-center mb-6 w-full">
+            <img 
+              src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/e617b1a7-81e6-44ea-9b26-1b5627d7906f/2.png" 
+              alt="SEDEX Member" 
+              class="max-h-20 object-contain"
+            />
+          </div>
+          <span class="text-xs font-mono bg-brand-900 text-brand-gold px-3 py-1 rounded-full mb-3">
+            Site Ref: ZS1000040026
+          </span>
+          <h3 class="font-serif text-xl font-bold text-brand-900">SEDEX Member</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Transparent &amp; responsible supply chain management with full traceability for global retail partners.
+          </p>
+        </div>
+
+        <!-- SMETA 4-PILLAR -->
+        <div class="bg-brand-50 rounded-2xl p-8 border border-brand-200/70 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="h-28 flex items-center justify-center mb-6 w-full">
+            <img 
+              src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/16e2dd38-9b63-46eb-9608-21cbdd136dbc/1.png" 
+              alt="SMETA 4-Pillar Certified" 
+              class="max-h-20 object-contain"
+            />
+          </div>
+          <span class="text-xs font-mono bg-emerald-900 text-emerald-200 px-3 py-1 rounded-full mb-3">
+            4-Pillar Verified Audit
+          </span>
+          <h3 class="font-serif text-xl font-bold text-brand-900">SMETA 4-Pillar</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Ethical trade compliance verified across Labor Standards, Health &amp; Safety, Environment, and Business Ethics.
+          </p>
+        </div>
+
+        <!-- FAMA APPROVED -->
+        <div class="bg-brand-50 rounded-2xl p-8 border border-brand-200/70 flex flex-col items-center text-center hover:shadow-lg transition">
+          <div class="h-28 flex items-center justify-center mb-6 w-full">
+            <img 
+              src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/f7f235bb-1238-457c-8c9e-f8461f8e44ef/3.png" 
+              alt="FAMA Approved Facility" 
+              class="max-h-20 object-contain"
+            />
+          </div>
+          <span class="text-xs font-mono bg-blue-950 text-blue-200 px-3 py-1 rounded-full mb-3">
+            Authorized Licensee Facility
+          </span>
+          <h3 class="font-serif text-xl font-bold text-brand-900">FAMA Approved</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Facility and Merchandise Authorization certified for official Disney-compliant garment manufacturing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS & PRODUCT SHOWCASE (Filterable + Lightbox) -->
+  <section id="collections" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 scroll-reveal">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">What We Make</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-900 mt-2">
+          Original Manufactured Collections
+        </h2>
+        <p class="text-gray-600 mt-2 italic">
+          All products shown are original pieces manufactured at our own Tirupur factory.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-2" id="collection-filters">
+        <button data-filter="all" class="filter-btn active bg-brand-900 text-white text-xs font-semibold px-4 py-2.5 rounded-full transition">
+          All Categories
+        </button>
+        <button data-filter="polos" class="filter-btn bg-white hover:bg-brand-100 text-brand-800 border border-brand-200 text-xs font-semibold px-4 py-2.5 rounded-full transition">
+          Men's Polos
+        </button>
+        <button data-filter="roundneck" class="filter-btn bg-white hover:bg-brand-100 text-brand-800 border border-brand-200 text-xs font-semibold px-4 py-2.5 rounded-full transition">
+          High Fashion Round Necks
+        </button>
+        <button data-filter="knitshirts" class="filter-btn bg-white hover:bg-brand-100 text-brand-800 border border-brand-200 text-xs font-semibold px-4 py-2.5 rounded-full transition">
+          Knitted Shirts
+        </button>
+        <button data-filter="outerwear" class="filter-btn bg-white hover:bg-brand-100 text-brand-800 border border-brand-200 text-xs font-semibold px-4 py-2.5 rounded-full transition">
+          Jackets, Hoodies &amp; Sweatshirts
+        </button>
+        <button data-filter="kids-womens" class="filter-btn bg-white hover:bg-brand-100 text-brand-800 border border-brand-200 text-xs font-semibold px-4 py-2.5 rounded-full transition">
+          Disney, Kids, Women &amp; Shorts
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="collection-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal scroll-reveal-stagger">
+      <!-- Item 1: Polos -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="polos" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/80235fd7-c416-4763-8bee-d03b06102d12/IMG_7864.JPG', 'Signature Men\'s Polo', 'Men\'s Polo Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/80235fd7-c416-4763-8bee-d03b06102d12/IMG_7864.JPG" alt="Men's Polo" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Men's Polo</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Classic &amp; Mercerized Polos</h3>
+            <p class="text-xs text-gray-500">Pique / Jacquard / Striper</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 2: Men's Polo 2 -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="polos" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/9ad805b6-09c2-4b59-952c-110395257ff9/04b5f09e-2baf-4a10-9059-06789928efde.JPG', 'Tipped Collar Pique Polo', 'Men\'s Polo Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/9ad805b6-09c2-4b59-952c-110395257ff9/04b5f09e-2baf-4a10-9059-06789928efde.JPG" alt="Men's Polo Collection" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Men's Polo</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Contrast Rib Collar Polo</h3>
+            <p class="text-xs text-gray-500">210–250 GSM Cotton Lycra Pique</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 3: Knitted Shirts -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="knitshirts" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/816d9e7f-71fb-4e50-b6df-29d44eab35be/e11f23a8-7060-478c-b0ce-079c1b2408b6.JPG', 'Structured Knitted Shirt', 'Knit Shirts Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/816d9e7f-71fb-4e50-b6df-29d44eab35be/e11f23a8-7060-478c-b0ce-079c1b2408b6.JPG" alt="Knitted Shirts" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Knit Shirts</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Resort &amp; Casual Knit Shirts</h3>
+            <p class="text-xs text-gray-500">Waffle / Seersucker / Jacquard</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 4: Knit Shirts 2 -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="knitshirts" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/a1e0c92d-8b5a-4ab4-bb3b-821313bf4cb6/PHOTO-2026-01-13-10-38-04.jpg', 'Button-Down Textured Knit Shirt', 'Knit Shirts Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/a1e0c92d-8b5a-4ab4-bb3b-821313bf4cb6/PHOTO-2026-01-13-10-38-04.jpg" alt="Knit Shirt" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Knit Shirts</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Textured Button-Down Knit</h3>
+            <p class="text-xs text-gray-500">100% Cotton Textured Weave</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 5: Disney T-Shirts -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="kids-womens" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/204d0151-6fa3-4083-a752-df31ab023138/PHOTO-2026-03-25-13-59-34.jpg', 'Disney Licensed Graphic Tee', 'FAMA Certified Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/204d0151-6fa3-4083-a752-df31ab023138/PHOTO-2026-03-25-13-59-34.jpg" alt="Disney T-Shirts" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-blue-900/90 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">FAMA Disney Approved</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Disney Character T-Shirts</h3>
+            <p class="text-xs text-gray-500">High-Definition Licensed Prints</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 6: High Fashion Round Necks -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="roundneck" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/f235fb08-cf74-4a76-9d9d-b0e9e981a78c/File_000.png', 'High Fashion Round Neck Tee', 'Round Neck Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/f235fb08-cf74-4a76-9d9d-b0e9e981a78c/File_000.png" alt="Round Necks" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Round Necks</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">High Fashion Crew Necks</h3>
+            <p class="text-xs text-gray-500">Heavy Jersey &amp; Interlock</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 7: High Fashion Round Neck 2 -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="roundneck" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/301f0f30-daf4-4428-bb5d-c1d9110a0f28/003d180f-accd-443f-b174-c7bbe0e4b0bb.JPG', 'Graphic & Embossed Round Neck', 'High Fashion Round Neck')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/301f0f30-daf4-4428-bb5d-c1d9110a0f28/003d180f-accd-443f-b174-c7bbe0e4b0bb.JPG" alt="High Fashion Round Neck" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Round Necks</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Contemporary Graphic Tees</h3>
+            <p class="text-xs text-gray-500">230–280 GSM Heavy Jersey</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 8: Hoodies -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="outerwear" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/c1a9105a-3f41-488f-bbb5-0763d159ff7d/PHOTO-2026-03-25-13-10-20%282%29.jpg', 'Premium Pullover Hoodie', 'Outerwear & Fleece')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/c1a9105a-3f41-488f-bbb5-0763d159ff7d/PHOTO-2026-03-25-13-10-20%282%29.jpg" alt="Hoodies" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Hoodies</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Heavyweight Fleece Hoodies</h3>
+            <p class="text-xs text-gray-500">250–320 GSM Baby Terry / Fleece</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 9: Jackets -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="outerwear" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/44017514-8723-4d9f-a713-94bdfea963fe/PHOTO-2026-03-25-13-22-31.jpg', 'Zip-Up Knitted Jacket', 'Jackets & Outerwear')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/44017514-8723-4d9f-a713-94bdfea963fe/PHOTO-2026-03-25-13-22-31.jpg" alt="Jackets" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Jackets</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Structured Knit Jackets</h3>
+            <p class="text-xs text-gray-500">Precision Zipper &amp; Rib Finishing</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 10: Sweatshirts -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="outerwear" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/5644b0ef-fb0a-4f23-b94d-53e0445ca4a6/PHOTO-2026-03-25-14-02-08.jpg', 'Crewneck Sweatshirt', 'Sweatshirts Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/5644b0ef-fb0a-4f23-b94d-53e0445ca4a6/PHOTO-2026-03-25-14-02-08.jpg" alt="Sweatshirts" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Sweatshirts</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Relaxed Crew Sweatshirts</h3>
+            <p class="text-xs text-gray-500"> loop-back &amp; Brushed Terry</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 11: Boys T-Shirts -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="kids-womens" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/a99bca98-0b85-4c70-a648-ebb6c49fb7c3/PHOTO-2026-03-25-13-10-20.jpg', 'Boys Casual Knitwear', 'Kids Collection')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/a99bca98-0b85-4c70-a648-ebb6c49fb7c3/PHOTO-2026-03-25-13-10-20.jpg" alt="Boys T-Shirts" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Boys T-Shirts</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Boys Printed &amp; Striped Tees</h3>
+            <p class="text-xs text-gray-500">Soft-Touch 100% Cotton</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+
+      <!-- Item 12: Shorts & Women's Tees -->
+      <div class="collection-card group bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-sm hover:shadow-xl transition cursor-pointer card-zoom" data-category="kids-womens" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/dfd55a34-13dd-4143-8908-c4ea285792ff/PHOTO-2026-03-25-13-10-20%281%29.jpg', 'Knitted Lounge & Athleisure Shorts', 'Shorts & Joggers')">
+        <div class="aspect-[3/4] overflow-hidden bg-brand-100 relative">
+          <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/dfd55a34-13dd-4143-8908-c4ea285792ff/PHOTO-2026-03-25-13-10-20%281%29.jpg" alt="Knitted Shorts" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          <span class="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">Shorts &amp; Bottoms</span>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-brand-900">Athleisure Shorts &amp; Joggers</h3>
+            <p class="text-xs text-gray-500"> Terry / Flat Back Rib</p>
+          </div>
+          <i data-lucide="maximize-2" class="w-4 h-4 text-gray-400 group-hover:text-brand-900"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FABRIC R&D LAB & GARMENT EXPERIENCE ROOM -->
+  <section id="fabrics" class="py-20 lg:py-28 bg-brand-900 text-white weft-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Garment Experience Room Showcase -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28 scroll-reveal-left">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">In-House Fabric Innovation</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4 leading-tight">
+            Explore Our New Fabrics in the <span class="text-brand-gold italic font-normal">Garment Experience Room.</span>
+          </h2>
+          <p class="text-brand-100/80 text-sm sm:text-base leading-relaxed mb-6">
+            Developed by our skilled and experienced Fabrics Team, our proprietary knit structures combine luxury hand-feel, dimensional stability, and specialized finishes.
+          </p>
+
+          <div class="rounded-2xl overflow-hidden border border-white/15 shadow-2xl relative group">
+            <img 
+              src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/e34732d1-b92d-48e7-a491-2adee6dd8969/IMG-20261008-WA0008+%281%29.jpg" 
+              alt="Win Wins Impex Garment Experience Room" 
+              class="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-brand-gold font-semibold">Showroom • Tirupur Facility</span>
+                <h3 class="font-serif text-2xl font-bold text-white">The Garment Experience Room</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- GSM Filter Bar -->
+          <div class="mt-6 bg-white/5 border border-white/10 rounded-xl p-4">
+            <label for="fabric-search" class="block text-xs uppercase tracking-wider text-brand-gold font-semibold mb-2">
+              Quick Filter Fabrics (by GSM, Fiber, or Knit):
+            </label>
+            <div class="relative">
+              <input 
+                type="text" 
+                id="fabric-search" 
+                placeholder="e.g. 260 GSM, Supima, Interlock, Mercerized, Waffle..." 
+                class="w-full bg-brand-800 text-white placeholder-white/40 text-sm px-4 py-3 rounded-lg border border-white/15 focus:outline-none focus:border-brand-gold"
+              />
+              <i data-lucide="search" class="w-4 h-4 text-brand-gold absolute right-3.5 top-3.5"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Structured Technical Fabric Cards -->
+        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4 scroll-reveal scroll-reveal-stagger" id="fabric-cards-container">
+          
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">180 – 300 GSM</span>
+              <span class="text-xs text-white/50 uppercase">100% Cotton</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">100% Cotton Textured Knits</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              Waffle (230 GSM), Big Seersucker (180 GSM), Flat Back (260 GSM), Flat Back Rib (260 GSM), Towel (220 GSM), Mini Jacquard (220 GSM), Cross Twill (210 GSM), Drop Needle (300 GSM).
+            </p>
+          </div>
+
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">180 – 250 GSM</span>
+              <span class="text-xs text-white/50 uppercase">Luxury Blends</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">Supima Cotton Blends</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              Supima Cotton / Lycra (180 GSM) and Supima Cotton / Modal / Poly / Spandex (250 GSM) for ultra-soft drape and longevity.
+            </p>
+          </div>
+
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">200 GSM</span>
+              <span class="text-xs text-white/50 uppercase">Performance</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">Cool Touch Special Finish</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              Cotton / Poly / Spandex (200 GSM) engineered with specialized Cool Touch thermal-regulating finish.
+            </p>
+          </div>
+
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">230 GSM</span>
+              <span class="text-xs text-white/50 uppercase">Jacquard</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">Transfer Jacquard Knits</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              100% Cotton Transfer Jacquard (230 GSM), Cotton/Poly with Spandex, and 95/5 Cotton Spandex Transfer Jacquards.
+            </p>
+          </div>
+
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">230 – 280 GSM</span>
+              <span class="text-xs text-white/50 uppercase">Heavy Jersey</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">Heavy &amp; Striper Jerseys</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              100% Cotton 2/30s Heavy Jersey (280 GSM), Striper Heavy Jersey (240 GSM), Solid Heavy Jersey (230 &amp; 250 GSM), and Cotton Lyocell Heavy Jersey (260 GSM).
+            </p>
+          </div>
+
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">230 – 320 GSM</span>
+              <span class="text-xs text-white/50 uppercase">Terry</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">Baby Terry Collection</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              95/5 Cotton/Lycra Baby Terry (230 GSM) and 100% Cotton Baby Terry in 250 GSM &amp; 320 GSM weights for hoodies, sweatshirts, and joggers.
+            </p>
+          </div>
+
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">180 – 260 GSM</span>
+              <span class="text-xs text-white/50 uppercase">Interlock</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">Fine &amp; Plated Interlocks</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              Soft Touch 100% Cotton Interlock (195 &amp; 230 GSM), 50s Interlock 95/5 Cotton/Lycra (230 GSM), Bamboo Cotton Interlock (220 GSM), and Lyocell/Poly/Spandex Plated Interlock (180 &amp; 260 GSM).
+            </p>
+          </div>
+
+          <div class="fabric-item bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl p-5 transition">
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-xs font-mono text-brand-gold bg-brand-gold/10 px-2.5 py-1 rounded">170 – 250 GSM</span>
+              <span class="text-xs text-white/50 uppercase">Pique &amp; Mercerized</span>
+            </div>
+            <h4 class="font-bold text-lg text-white">Mercerized, Pique &amp; Yarn-Dyed</h4>
+            <p class="text-xs text-brand-100/80 mt-2 leading-relaxed">
+              70s 170 GSM Single Mercerized with Gold Finish, 2/40s 240 GSM Pique, Cotton Lycra Pique (210–250 GSM), Yarn-Dyed S/J Stripes (210 &amp; 230 GSM), and Modal Spandex Stripes (250 GSM).
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP SECTION -->
+  <section id="leadership" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+      <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">Executive Leadership</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-900 mt-2">
+        Guided by Values, Driven by Innovation
+      </h2>
+    </div>
+
+    <!-- Founder Feature Card -->
+    <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-brand-200/80 mb-12 scroll-reveal">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div class="rounded-2xl overflow-hidden aspect-[3/4]">
+            <img 
+              src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/4299e64f-0536-4c11-9600-1bab366cda0b/Untitled+design+%283%29.png" 
+              alt="Thiagarajan Venugopal - Founder" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-[3/4] mt-6">
+            <img 
+              src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/4667043c-23d8-44d0-8dea-173bd67ac5bb/Untitled+design+%285%29.png" 
+              alt="Founder & Sons Leadership" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <span class="inline-block text-xs font-bold uppercase tracking-widest text-brand-gold bg-brand-900 px-3.5 py-1 rounded-full">
+            Founder &amp; Managing Director
+          </span>
+          <h3 class="font-serif text-3xl sm:text-4xl font-bold text-brand-900 mt-3">
+            Thiagarajan Venugopal
+          </h3>
+          <blockquote class="mt-6 space-y-4 text-gray-700 leading-relaxed italic border-l-4 border-brand-gold pl-5">
+            <p>
+              “Over the years, we have built this company on a strong foundation of trust, long-standing relationships, and an unwavering commitment to quality. Our journey has been shaped by the goodwill of our clients and the values we have upheld through every phase of growth.
+            </p>
+            <p>
+              It gives me immense pride to have mentored my sons, who now lead the company with a shared vision for excellence and consistency. Seeing them take the business to new heights while preserving its core principles is deeply fulfilling.
+            </p>
+            <p>
+              Together, we have navigated challenges, including economic uncertainties and global disruptions, emerging stronger each time. With deep-rooted values and a progressive outlook, we remain committed to building a resilient and enduring enterprise for years to come.”
+            </p>
+          </blockquote>
+          <p class="text-right font-serif font-bold text-brand-900 mt-4">— Thiagarajan V.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Managing Partners Grid -->
+    <div class="grid md:grid-cols-2 gap-8 scroll-reveal scroll-reveal-stagger">
+      <!-- Karthikeyan Thiagarajan -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-brand-200/80 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+        <img 
+          src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/6c60cc7f-26c8-4b08-bf70-29b20edba8a7/PHOTO-2026-03-26-10-17-32+%281%29.jpg" 
+          alt="Karthikeyan Thiagarajan" 
+          class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-brand-100 shadow flex-shrink-0"
+        />
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Managing Partner</span>
+          <h4 class="font-serif text-2xl font-bold text-brand-900 mt-0.5">Karthikeyan Thiagarajan</h4>
+          <p class="text-sm text-gray-600 italic mt-3 leading-relaxed">
+            “Our focus has always been on delivering consistent quality through the right fabrics and disciplined processes. We believe that attention to detail at every stage is what defines a truly premium product.”
+          </p>
+          <p class="text-right font-serif font-bold text-brand-900 text-sm mt-3">— Karthick</p>
+        </div>
+      </div>
+
+      <!-- Jagath Thiagarajan -->
+      <div class="bg-white rounded-3xl p-8 shadow-lg border border-brand-200/80 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+        <img 
+          src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/ee94d879-9b84-42a1-95ba-d2577127b8ad/Untitled+design+%286%29.png" 
+          alt="Jagath Thiagarajan" 
+          class="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-brand-100 shadow flex-shrink-0"
+        />
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Managing Partner</span>
+          <h4 class="font-serif text-2xl font-bold text-brand-900 mt-0.5">Jagath Thiagarajan</h4>
+          <p class="text-sm text-gray-600 italic mt-3 leading-relaxed">
+            “We are constantly evolving with global trends while staying rooted in strong manufacturing fundamentals. Our goal is to create garments that reflect both innovation and reliability.”
+          </p>
+          <p class="text-right font-serif font-bold text-brand-900 text-sm mt-3">— Jagath</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTORY TOUR SECTION -->
+  <section id="factory" class="py-20 bg-brand-100/70 border-t border-brand-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 scroll-reveal">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-600">50,000 Sq. Ft. Integrated Facility</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-900 mt-2">
+          Inside Our Manufacturing Floor
+        </h2>
+        <p class="text-gray-600 mt-3">
+          From precision cutting and automated sewing lines to final steam ironing and quality assurance.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 scroll-reveal scroll-reveal-stagger">
+        <!-- Entrance -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-200 group cursor-pointer card-zoom" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/0f844759-5b07-43bf-9a40-3b1c80711b35/ea2e41b8-bf52-463f-9e08-a65ea07e0ffa.jpg', 'Facility Entrance', 'Tirupur Smart City')">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/0f844759-5b07-43bf-9a40-3b1c80711b35/ea2e41b8-bf52-463f-9e08-a65ea07e0ffa.jpg" alt="Factory Entrance" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <span class="font-bold text-brand-900">01. Facility Entrance</span>
+            <span class="text-xs text-brand-500">Tirupur HQ</span>
+          </div>
+        </div>
+
+        <!-- Garment Experience Room -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-200 group cursor-pointer card-zoom" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/38d2716a-f88d-45f9-badd-23e039d48fd8/IMG-20261008-WA0008.jpg', 'Garment Experience Room', 'Showroom & Merchandising')">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/38d2716a-f88d-45f9-badd-23e039d48fd8/IMG-20261008-WA0008.jpg" alt="Garment Experience Room" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <span class="font-bold text-brand-900">02. Garment Experience Room</span>
+            <span class="text-xs text-brand-500">Buyer Showroom</span>
+          </div>
+        </div>
+
+        <!-- Cutting Section -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-200 group cursor-pointer card-zoom" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/1df5cba2-f172-4fdb-b671-a06727e74c89/ChatGPT+Image+Mar+25%2C+2026%2C+03_34_04+PM.png', 'Cutting Section', 'Precision Fabric Spreading & Cutting')">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/1df5cba2-f172-4fdb-b671-a06727e74c89/ChatGPT+Image+Mar+25%2C+2026%2C+03_34_04+PM.png" alt="Cutting Section" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <span class="font-bold text-brand-900">03. Cutting Section</span>
+            <span class="text-xs text-brand-500">Precision Spreading</span>
+          </div>
+        </div>
+
+        <!-- Sewing Section -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-200 group cursor-pointer card-zoom" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/2e54aff6-84d4-4b3d-a02d-660b6c864684/Untitled+design+%287%29.png', 'Sewing Section', 'High-Speed Apparel Assembly')">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/2e54aff6-84d4-4b3d-a02d-660b6c864684/Untitled+design+%287%29.png" alt="Sewing Section" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <span class="font-bold text-brand-900">04. Sewing Section</span>
+            <span class="text-xs text-brand-500">Production Lines</span>
+          </div>
+        </div>
+
+        <!-- Trimming & Checking -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-200 group cursor-pointer card-zoom" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/19b601e5-3a99-475b-af84-13ef39c1689f/ChatGPT+Image+Mar+25%2C+2026%2C+03_56_19+PM.png', 'Trimming & Quality Inspection', '100% In-Line & End-Line QC')">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/19b601e5-3a99-475b-af84-13ef39c1689f/ChatGPT+Image+Mar+25%2C+2026%2C+03_56_19+PM.png" alt="Trimming Section" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <span class="font-bold text-brand-900">05. Trimming &amp; QC Section</span>
+            <span class="text-xs text-brand-500">Zero-Defect Inspection</span>
+          </div>
+        </div>
+
+        <!-- Ironing Section -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-200 group cursor-pointer card-zoom" onclick="openLightbox('https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/8c1233ad-92d2-4cbc-b28f-bfcb65343ced/870d1c8f-1d9b-46cd-99c6-845c0450ef1c.JPG', 'Steam Ironing & Finishing', 'Export-Ready Finishing')">
+          <div class="aspect-[3/2] overflow-hidden">
+            <img src="https://images.squarespace-cdn.com/content/v1/69c14eb495bb326497a413ec/8c1233ad-92d2-4cbc-b28f-bfcb65343ced/870d1c8f-1d9b-46cd-99c6-845c0450ef1c.JPG" alt="Ironing Section" class="w-full h-full object-cover transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-4 flex justify-between items-center">
+            <span class="font-bold text-brand-900">06. Ironing &amp; Finishing</span>
+            <span class="text-xs text-brand-500">Steam Finishing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B CONTACT & RFQ SECTION -->
+  <section id="contact" class="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl shadow-2xl border border-brand-200 overflow-hidden grid lg:grid-cols-12 scroll-reveal">
+      
+      <!-- Contact Details Sidebar -->
+      <div class="lg:col-span-5 bg-brand-900 text-white p-8 sm:p-12 flex flex-col justify-between scroll-reveal-left">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">Partner With Us</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">
+            Start a Sourcing Enquiry
+          </h2>
+          <p class="text-brand-100/80 text-sm leading-relaxed mb-8">
+            Interested in working together or requesting fabric swatches and sample development? Fill out the form and our export merchandising team will respond promptly.
+          </p>
+
+          <div class="space-y-6 text-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-white/10 text-brand-gold">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="font-bold text-white">Factory &amp; Registered Office</p>
+                <p class="text-brand-100/80 mt-1">
+                  690/2, Suriya Compound, KNP Colony,<br />
+                  Dharapuram Road, Tirupur Smart City,<br />
+                  Tamil Nadu, India — Pin Code: 641608
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-white/10 text-brand-gold">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="font-bold text-white">Direct Export Desk Emails</p>
+                <a href="mailto:jagath@winwinsimpex.com" class="block text-brand-gold hover:underline mt-1">jagath@winwinsimpex.com</a>
+                <a href="mailto:winsimpex@gmail.com" class="block text-brand-100/80 hover:text-white">winsimpex@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-xl bg-white/10 text-brand-gold">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="font-bold text-white">Phone / WhatsApp</p>
+                <a href="tel:+919952222446" class="block text-brand-gold hover:underline mt-1">(+91) 99522 22446</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-white/15 flex items-center justify-between text-xs text-brand-100/60">
+          <span>SEDEX: ZS1000040026</span>
+          <span>SMETA 4-Pillar</span>
+          <span>Disney FAMA</span>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-7 p-8 sm:p-12 scroll-reveal-right">
+        <form id="rfq-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-brand-800 mb-2">First Name *</label>
+              <input type="text" required placeholder="John" class="w-full px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:border-brand-900 bg-brand-50/50" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-brand-800 mb-2">Last Name *</label>
+              <input type="text" required placeholder="Doe" class="w-full px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:border-brand-900 bg-brand-50/50" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-brand-800 mb-2">Work Email *</label>
+              <input type="email" required placeholder="buyer@brand.com" class="w-full px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:border-brand-900 bg-brand-50/50" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-brand-800 mb-2">Phone / WhatsApp *</label>
+              <input type="tel" required placeholder="+44 / +1 / +91..." class="w-full px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:border-brand-900 bg-brand-50/50" />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-brand-800 mb-2">Brand / Company Name</label>
+              <input type="text" placeholder="Your Apparel Brand" class="w-full px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:border-brand-900 bg-brand-50/50" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-brand-800 mb-2">Country / Region</label>
+              <input type="text" placeholder="e.g. Europe, UK, USA, UAE" class="w-full px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:border-brand-900 bg-brand-50/50" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-brand-800 mb-2">Enquiry / Tech Pack Details *</label>
+            <textarea rows="4" required placeholder="Tell us about your product categories (Polos, Knit Shirts, Hoodies, etc.), target GSM/fabrics, and estimated order volume..." class="w-full px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:border-brand-900 bg-brand-50/50"></textarea>
+          </div>
+
+          <button type="submit" class="w-full sm:w-auto bg-brand-900 hover:bg-brand-800 text-white font-bold px-10 py-4 rounded-full transition shadow-lg flex items-center justify-center gap-2">
+            <span>Send Enquiry</span>
+            <i data-lucide="send" class="w-4 h-4 text-brand-gold"></i>
+          </button>
+
+          <div id="form-success" class="hidden py-3 text-emerald-800 text-sm font-medium">
+            <strong>Thank you! Your enquiry is received.</strong> Please wait—our team will get back to you shortly.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-900 text-brand-100 py-14 border-t border-white/10 scroll-reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-2">
+        <span class="font-serif text-2xl font-bold text-white">WIN WINS IMPEX</span>
+        <p class="text-sm text-brand-100/70 mt-3 max-w-md leading-relaxed">
+          Export Garments Manufacturer crafting premium circular knitwear for global markets since 2004. SEDEX, SMETA 4-Pillar &amp; Disney FAMA Certified facility in Tirupur, India.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">Location</h4>
+        <p class="text-sm text-brand-100/80 leading-relaxed">
+          690/2, Suriya Compound,<br />
+          KNP Colony, Dharapuram Road,<br />
+          Tirupur Smart City, Tamil Nadu,<br />
+          India — 641608
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-3">Direct Contact</h4>
+        <p class="text-sm space-y-1.5">
+          <a href="mailto:jagath@winwinsimpex.com" class="block hover:text-brand-gold">jagath@winwinsimpex.com</a>
+          <a href="mailto:winsimpex@gmail.com" class="block hover:text-brand-gold">winsimpex@gmail.com</a>
+          <a href="tel:+919952222446" class="block text-brand-gold font-semibold pt-1">(+91) 99522 22446</a>
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-8 border-t border-white/10 text-xs text-brand-100/50 flex flex-wrap justify-between gap-4">
+      <span>© 2004–2026 WIN WINS IMPEX. All rights reserved.</span>
+      <span>Tirupur Smart City, Tamil Nadu, India</span>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR IMAGES -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-4xl w-full bg-brand-900 rounded-2xl overflow-hidden border border-white/15 shadow-2xl" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 bg-black/60 hover:bg-black text-white p-2 rounded-full">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <img id="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="Enlarged garment photograph" class="w-full max-h-[78vh] object-contain bg-black" />
+      <div class="p-4 bg-brand-900 text-white flex justify-between items-center">
+        <div>
+          <h4 id="lightbox-title" class="font-serif text-lg font-bold"></h4>
+          <p id="lightbox-sub" class="text-xs text-brand-gold"></p>
+        </div>
+        <a href="#contact" onclick="closeLightbox()" class="text-xs bg-brand-gold text-brand-900 font-bold px-4 py-2 rounded-full">
+          Enquire About This Style
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENTLE BACK TO TOP BUTTON -->
+  <button 
+    id="back-to-top-btn" 
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+    aria-label="Back to top" 
+    class="fixed bottom-20 right-6 z-40 bg-brand-900 hover:bg-brand-800 text-brand-gold border border-brand-gold/30 p-3 rounded-full shadow-xl flex items-center justify-center transition"
+  >
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- AD-FREE NATIVE WHATSAPP EXPORT DESK BUTTON -->
+  <a 
+    href="https://wa.me/919952222446?text=Hello%20Win%20Wins%20Impex%20Team%2C%20we%20are%20interested%20in%20sourcing%20knitwear%20garments." 
+    target="_blank" 
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    class="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#1ebe5b] text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 font-semibold text-sm transition transform hover:-translate-y-0.5"
+  >
+    <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+    <span>WhatsApp Export Desk</span>
+  </a>
+
+  <!-- INTERACTIVE SCRIPTS & GENTLE SCROLL EFFECTS -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      // Close mobile menu on link click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Collection Category Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const collectionCards = document.querySelectorAll('.collection-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-brand-900', 'text-white');
+          b.classList.add('bg-white', 'text-brand-800');
+        });
+        btn.classList.add('bg-brand-900', 'text-white');
+        btn.classList.remove('bg-white', 'text-brand-800');
+
+        collectionCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Live Fabric Search Filter
+    const fabricSearch = document.getElementById('fabric-search');
+    const fabricItems = document.querySelectorAll('.fabric-item');
+
+    if (fabricSearch) {
+      fabricSearch.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        fabricItems.forEach(item => {
+          const text = item.innerText.toLowerCase();
+          item.style.display = text.includes(query) ? 'block' : 'none';
+        });
+      });
+    }
+
+    // Lightbox Modal
+    function openLightbox(src, title, sub) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-title').innerText = title;
+      document.getElementById('lightbox-sub').innerText = sub;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+
+    // Close on ESC key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Form Submission Feedback
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+      e.target.reset();
+    }
+
+    /* ==========================================================================
+       GENTLE SMOOTH SCROLL EFFECTS & BIDIRECTIONAL FADE-IN / FADE-OUT
+       ========================================================================== */
+
+    // 1. Enhanced Gentle Smooth Scroll Navigation (Offset for sticky navbar)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#' || targetId === '') return;
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          const navbarHeight = 80;
+          const elementPosition = targetEl.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // 2. Bidirectional Gentle Scroll Reveal (IntersectionObserver with Fade-In and Fade-Out)
+    const revealElements = document.querySelectorAll(
+      '.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, .scroll-reveal-stagger'
+    );
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Gentle Fade In when entering viewport
+          entry.target.classList.add('scroll-visible');
+        } else {
+          // Gentle Fade Out when scrolled out of view (smooth bidirectional transition)
+          entry.target.classList.remove('scroll-visible');
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.12
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Initial check for elements visible on first load (e.g. Hero section)
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        revealElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+            el.classList.add('scroll-visible');
+          }
+        });
+      }, 120);
+    });
+
+    // 3. Gentle Animated Numeric Counters (Easing count-up)
+    let countersAnimated = false;
+    function animateGentleCounters() {
+      const counters = document.querySelectorAll('.counter-val');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'), 10);
+        const isComma = counter.getAttribute('data-format') === 'comma';
+        const duration = 1600; // 1.6s gentle duration
+        const startTime = performance.now();
+
+        function step(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Gentle cubic ease-out curve
+          const ease = 1 - Math.pow(1 - progress, 3);
+          const currentVal = Math.floor(ease * target);
+          
+          counter.textContent = isComma ? currentVal.toLocaleString('en-US') : currentVal;
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            counter.textContent = isComma ? target.toLocaleString('en-US') : target;
+          }
+        }
+        requestAnimationFrame(step);
+      });
+    }
+
+    const firstCounter = document.querySelector('.counter-val');
+    if (firstCounter) {
+      const counterContainer = firstCounter.closest('section');
+      if (counterContainer) {
+        const counterObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !countersAnimated) {
+              countersAnimated = true;
+              animateGentleCounters();
+            }
+          });
+        }, { threshold: 0.25 });
+        counterObserver.observe(counterContainer);
+      }
+    }
+
+    // 4. Scroll Progress Indicator & Back to Top Button
+    const progressBar = document.getElementById('scroll-progress-indicator');
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    const navbar = document.getElementById('navbar');
+    const heroBgImg = document.getElementById('hero-bg-img');
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      
+      // Top scroll progress bar
+      if (progressBar && docHeight > 0) {
+        const progress = Math.min((scrollTop / docHeight) * 100, 100);
+        progressBar.style.width = progress + '%';
+      }
+
+      // Back to top button visibility
+      if (backToTopBtn) {
+        if (scrollTop > 380) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      }
+
+      // Sticky navbar elevation
+      if (navbar) {
+        if (scrollTop > 40) {
+          navbar.classList.add('shadow-md');
+        } else {
+          navbar.classList.remove('shadow-md');
+        }
+      }
+
+      // Gentle Hero Parallax drift (calm 0.14 factor)
+      if (heroBgImg && scrollTop < window.innerHeight) {
+        heroBgImg.style.transform = `translate3d(0, ${scrollTop * 0.14}px, 0) scale(1.05)`;
+      }
+    }, { passive: true });
+
+    // 5. Active Navigation ScrollSpy
+    const spySections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollPosition = window.pageYOffset + 120;
+
+      spySections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
