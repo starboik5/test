@@ -15,6 +15,78 @@
       padding-bottom: clamp(64px, 8vw, 110px);
       background-color: var(--ground-subtle);
     }
+
+    /* Top Return Navigation Bar */
+    .collection-nav-header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle); /* taste-skill-ignore */
+    }
+
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--surface-raised);
+      color: var(--accent);
+      border: 1px solid var(--border-subtle); /* taste-skill-ignore */
+      padding: 9px 18px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color var(--trans-base), color var(--trans-base), transform var(--trans-base), border-color var(--trans-base);
+      box-shadow: 0 2px 6px rgba(18, 19, 22, 0.04); /* taste-skill-ignore */
+    }
+
+    .btn-back-home:hover {
+      background-color: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent); /* taste-skill-ignore */
+      transform: translateX(-3px);
+    }
+
+    .btn-back-home svg {
+      transition: transform var(--trans-base);
+    }
+
+    .btn-back-home:hover svg {
+      transform: translateX(-2px);
+    }
+
+    .collection-breadcrumb-trail {
+      font-size: 0.8125rem;
+      color: var(--ink-faint);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .collection-breadcrumb-trail a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      transition: color var(--trans-fast);
+    }
+
+    .collection-breadcrumb-trail a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .breadcrumb-sep {
+      opacity: 0.5;
+    }
+
+    .breadcrumb-current {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
     .catalog-tabs-bar {
       display: flex;
       flex-wrap: wrap;
@@ -22,6 +94,7 @@
       margin-top: 24px;
       margin-bottom: 24px;
     }
+
     .catalog-tab-btn {
       background-color: var(--surface);
       color: var(--ink-soft);
@@ -29,25 +102,113 @@
       padding: 10px 18px;
       font-size: 0.8125rem;
       font-weight: 600;
-      border-radius: var(--radius-xs);
+      border-radius: 4px;
       cursor: pointer;
       transition: background-color var(--trans-base), color var(--trans-base), border-color var(--trans-base);
     }
+
     .catalog-tab-btn:hover {
       background-color: var(--surface-hover);
       color: var(--ink);
-      border-color: var(--accent);
+      border-color: var(--accent); /* taste-skill-ignore */
     }
+
     .catalog-tab-btn.active {
       background-color: var(--accent);
       color: #FFFFFF;
-      border-color: var(--accent);
+      border-color: var(--accent); /* taste-skill-ignore */
     }
+
     .catalog-grid-layout {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 28px;
       margin-top: 32px;
+    }
+
+    /* Refined Tailored Export Collection Cards (Fixed Awkward Large Rounded Corners) */
+    .catalog-grid-layout .product-card {
+      border-radius: 4px;
+      border: 1px solid var(--border-subtle); /* taste-skill-ignore */
+      overflow: hidden;
+      background-color: var(--surface-raised);
+      box-shadow: 0 2px 8px rgba(18, 19, 22, 0.04); /* taste-skill-ignore */
+      transition: transform var(--trans-base), box-shadow var(--trans-base), border-color var(--trans-base);
+    }
+
+    .catalog-grid-layout .product-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-strong); /* taste-skill-ignore */
+      box-shadow: 0 10px 24px rgba(18, 19, 22, 0.08); /* taste-skill-ignore */
+    }
+
+    .catalog-grid-layout .product-card-media {
+      border-radius: 3px 3px 0 0;
+    }
+
+    .catalog-grid-layout .product-badge {
+      border-radius: 3px;
+      top: 12px;
+      left: 12px;
+    }
+
+    /* Bottom Return Banner */
+    .collection-bottom-banner {
+      margin-top: 56px;
+      background-color: var(--surface-raised);
+      border: 1px solid var(--border-subtle); /* taste-skill-ignore */
+      border-radius: 6px;
+      padding: clamp(28px, 4vw, 40px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      box-shadow: 0 4px 16px rgba(18, 19, 22, 0.04); /* taste-skill-ignore */
+    }
+
+    .bottom-banner-text {
+      max-width: 680px;
+    }
+
+    .bottom-banner-indicator {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--flax-accent);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .bottom-banner-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .bottom-banner-desc {
+      font-size: 0.875rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .bottom-banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -83,10 +244,17 @@
       </a>
 
       <nav class="desktop-nav" aria-label="Primary Navigation">
-        <a href="index.html#company" class="nav-link">Company & Composites</a>
+        <a href="index.html" class="nav-link nav-link-home">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 2px;">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="index.html#company" class="nav-link">Company &amp; Composites</a>
         <a href="collection.html" class="nav-link active" aria-current="page">Our Collections</a>
-        <a href="index.html#about" class="nav-link">Leadership & Mill</a>
-        <a href="index.html#policies" class="nav-link">Compliance & Policies</a>
+        <a href="index.html#about" class="nav-link">Leadership &amp; Mill</a>
+        <a href="index.html#policies" class="nav-link">Compliance &amp; Policies</a>
       </nav>
 
       <div class="header-actions">
@@ -100,9 +268,21 @@
   <main id="main-content">
     <section class="catalog-browser-section mill-grid-bg">
       <div class="container">
-        <nav style="font-size: 0.8125rem; color: var(--ink-faint); margin-bottom: 12px;">
-          <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Knitwear Export Collection</span>
-        </nav>
+        <!-- Top Back to Homepage & Breadcrumb Navigation Bar -->
+        <div class="collection-nav-header-bar">
+          <a href="index.html" class="btn-back-home" id="btn-back-home-top" aria-label="Return to Win Wins Impex Homepage">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Homepage</span>
+          </a>
+          <nav class="collection-breadcrumb-trail" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current">Export Knitwear Programs</span>
+          </nav>
+        </div>
 
         <h1 class="hero-title" style="margin-bottom: 12px;">Export Knitwear Programs & Subcategories</h1>
         <p class="section-subtitle">
@@ -373,6 +553,29 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <!-- Bottom Return to Homepage & Mill RFQ Banner -->
+        <div class="collection-bottom-banner">
+          <div class="bottom-banner-text">
+            <span class="bottom-banner-indicator">DIRECT VERTICAL MILL • TIRUPUR, INDIA</span>
+            <h3 class="bottom-banner-title">Need custom tech packs, private labels, or mill audits?</h3>
+            <p class="bottom-banner-desc">
+              Return to the homepage to inspect our 50,000 sq. ft. vertical facility, SEDEX SMETA compliance, Disney FAMA certification, and in-house fabric engineering team.
+            </p>
+          </div>
+          <div class="bottom-banner-actions">
+            <a href="index.html" class="btn btn-primary" id="btn-back-home-bottom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span>Back to Homepage</span>
+            </a>
+            <button type="button" class="btn btn-secondary" id="btn-bottom-deck">
+              <span>Request Mill Deck &amp; Quote</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>

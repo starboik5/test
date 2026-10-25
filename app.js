@@ -849,10 +849,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const btnBookShowroom = document.getElementById('btn-book-showroom');
+  const btnBottomDeck = document.getElementById('btn-bottom-deck');
   if (btnBookShowroom) btnBookShowroom.addEventListener('click', openInquiryModal);
   if (btnHeroCta) btnHeroCta.addEventListener('click', openInquiryModal);
   if (btnHeaderInquiry) btnHeaderInquiry.addEventListener('click', openInquiryModal);
   if (btnFooterQuote) btnFooterQuote.addEventListener('click', openInquiryModal);
+  if (btnBottomDeck) btnBottomDeck.addEventListener('click', openInquiryModal);
   if (btnModalInquire) {
     btnModalInquire.addEventListener('click', () => {
       closeProductModal();
