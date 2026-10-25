@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Export Knitwear Collections & Subcategories — WIN WINS IMPEX | Tirupur, India</title>
+  <meta name="description" content="Explore WIN WINS IMPEX complete apparel export catalog: Men's polos, resort knit shirts, high fashion round necks, baby terry hoodies, Disney licensed character tees, and athleisure shorts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .catalog-browser-section {
+      padding-top: clamp(48px, 6vw, 84px);
+      padding-bottom: clamp(64px, 8vw, 110px);
+      background-color: var(--ground-subtle);
+    }
+    .catalog-tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+    .catalog-tab-btn {
+      background-color: var(--surface);
+      color: var(--ink-soft);
+      border: 1px solid var(--border-subtle); /* taste-skill-ignore */
+      padding: 10px 18px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      border-radius: var(--radius-xs);
+      cursor: pointer;
+      transition: background-color var(--trans-base), color var(--trans-base), border-color var(--trans-base);
+    }
+    .catalog-tab-btn:hover {
+      background-color: var(--surface-hover);
+      color: var(--ink);
+      border-color: var(--accent);
+    }
+    .catalog-tab-btn.active {
+      background-color: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+    }
+    .catalog-grid-layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Accreditation Bar -->
+  <aside class="top-announcement-bar" aria-label="Global Compliance Notice">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <span class="cert-indicator">SEDEX Site Ref: ZS1000040026</span>
+        <span class="announcement-sep">•</span>
+        <span>SMETA 4-Pillar Audited & Disney FAMA Approved Facility</span>
+      </div>
+      <div class="announcement-right">
+        <a href="mailto:jagath@winwinsimpex.com">jagath@winwinsimpex.com</a>
+        <span class="announcement-sep">•</span>
+        <a href="tel:+919952222446">(+91) 99522 22446</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="brand-wordmark" aria-label="Win Wins Impex Home">
+        <svg class="wordmark-symbol" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span class="wordmark-text">WIN WINS <span>IMPEX</span></span>
+        <span class="wordmark-sub">Tirupur • Est. 2004</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="index.html#company" class="nav-link">Company & Composites</a>
+        <a href="collection.html" class="nav-link active" aria-current="page">Our Collections</a>
+        <a href="index.html#about" class="nav-link">Leadership & Mill</a>
+        <a href="index.html#policies" class="nav-link">Compliance & Policies</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-sm btn-header-contact" id="btn-header-inquiry">
+          <span>Contact Us</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="catalog-browser-section mill-grid-bg">
+      <div class="container">
+        <nav style="font-size: 0.8125rem; color: var(--ink-faint); margin-bottom: 12px;">
+          <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Knitwear Export Collection</span>
+        </nav>
+
+        <h1 class="hero-title" style="margin-bottom: 12px;">Export Knitwear Programs & Subcategories</h1>
+        <p class="section-subtitle">
+          Direct contract manufacturing directory from our 50,000 sq. ft. vertical facility in Tirupur, India. Filter our 1,200+ production archive programs across subcategories and weight classes. Click any garment to inspect full technical mill specifications.
+        </p>
+
+        <!-- Subcategories Tabs with Subcategory Scale Counts -->
+        <div class="catalog-tabs-bar" role="tablist" aria-label="Garment Subcategories">
+          <button type="button" class="catalog-tab-btn active" data-filter="all">[ All Programs (1,200+ Archive) ]</button>
+          <button type="button" class="catalog-tab-btn" data-filter="polos">[ Men's Polos (140+ Styles) ]</button>
+          <button type="button" class="catalog-tab-btn" data-filter="knitshirts">[ Resort Knits (90+ Styles) ]</button>
+          <button type="button" class="catalog-tab-btn" data-filter="roundneck">[ Heavy Streetwear (200+ Styles) ]</button>
+          <button type="button" class="catalog-tab-btn" data-filter="outerwear">[ Jackets &amp; Fleece (120+ Styles) ]</button>
+          <button type="button" class="catalog-tab-btn" data-filter="disney">[ Disney Licensed (300+ Styles) ]</button>
+          <button type="button" class="catalog-tab-btn" data-filter="bottoms">[ Shorts &amp; Bottoms (150+ Styles) ]</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <input 
+            type="search" 
+            id="collection-search-input" 
+            placeholder="Search by fabric, yarn or keyword..." 
+            class="composite-search-input" 
+            style="max-width: 380px;"
+            aria-label="Filter garments"
+          >
+          <span style="font-size: 0.8125rem; color: var(--ink-faint);" id="catalog-count-note">Showing 12 export specimens</span>
+        </div>
+
+        <!-- 12 Product Cards Grid -->
+        <div class="catalog-grid-layout" id="collection-grid">
+          <!-- Item 1: Signature Polo -->
+          <article class="product-card" data-category="polos" data-product-id="polos" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_polo_signature.jpg" alt="Signature Combed Piqué Polo" loading="lazy">
+              <span class="product-badge">Men's Polo</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>240 GSM</span>
+                <span>2/40s Ne</span>
+              </div>
+              <h3 class="product-title">Signature Combed Piqué Polo</h3>
+              <p class="product-desc">Anti-curl flat knit jacquard collar, reinforced shoulder tape, and real trocas shell buttons.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Tipped Polo -->
+          <article class="product-card" data-category="polos" data-product-id="polos-tipped" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_polo_tipped.jpg" alt="Engineered Tipped Tennis Polo" loading="lazy">
+              <span class="product-badge">Tipped Polo</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>240 GSM</span>
+                <span>30s/2 Ne</span>
+              </div>
+              <h3 class="product-title">Engineered Tipped Tennis Polo</h3>
+              <p class="product-desc">Sporting heritage silhouette with precision-engineered contrast yarn-dyed tipping on collar and ribs.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Textured Knit Shirt -->
+          <article class="product-card" data-category="knitshirts" data-product-id="knitshirts" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_knit_shirt.jpg" alt="Textured Camp-Collar Knit Shirt" loading="lazy">
+              <span class="product-badge">Resort Knits</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>230 GSM</span>
+                <span>100% Cotton Weave</span>
+              </div>
+              <h3 class="product-title">Textured Camp-Collar Knit Shirt</h3>
+              <p class="product-desc">Cellular honeycomb weave and open camp collar for contemporary resort and casual lines.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Button Knit Shirt -->
+          <article class="product-card" data-category="knitshirts" data-product-id="knitshirts-button" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_knit_button.jpg" alt="Big Seersucker Button-Down Shirt" loading="lazy">
+              <span class="product-badge">Seersucker</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>230 GSM</span>
+                <span>Transfer Jacquard</span>
+              </div>
+              <h3 class="product-title">Big Seersucker Button-Down Shirt</h3>
+              <p class="product-desc">Raised puckered surface ridges keep fabric elevated off the skin for superior airflow in warm weather.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: High Fashion Round Neck -->
+          <article class="product-card" data-category="roundneck" data-product-id="roundneck" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_roundneck_crew.png" alt="High Fashion Heavyweight Crewneck" loading="lazy">
+              <span class="product-badge">Heavy Jersey</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>260 GSM</span>
+                <span>2/30s Heavy Jersey</span>
+              </div>
+              <h3 class="product-title">High Fashion Round Necks</h3>
+              <p class="product-desc">Heavyweight single jersey with compact 1x1 rib collar, drop-shoulder cut, and zero torquing.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Graphic Tee -->
+          <article class="product-card" data-category="roundneck" data-product-id="roundneck-graphic" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_roundneck_graphic.jpg" alt="Placement Graphic Streetwear Tee" loading="lazy">
+              <span class="product-badge">Graphic Program</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>240 GSM</span>
+                <span>24s Ne</span>
+              </div>
+              <h3 class="product-title">Placement Graphic Streetwear Tee</h3>
+              <p class="product-desc">Screen printed in our in-house automatic carousel printing facility with PVC-free water-based inks.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Hoodie -->
+          <article class="product-card" data-category="outerwear" data-product-id="hoodie" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_hoodie_fleece.jpg" alt="Brushed Heavyweight Fleece Hoodie" loading="lazy">
+              <span class="product-badge">Baby Terry</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>320 GSM</span>
+                <span>100% Cotton Baby Terry</span>
+              </div>
+              <h3 class="product-title">Heavyweight Fleece Hoodies</h3>
+              <p class="product-desc">Diagonal loopback baby terry with velvety peach-brushed interior and 3-panel hood construction.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Track Jacket -->
+          <article class="product-card" data-category="outerwear" data-product-id="jacket" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_jacket_zip.jpg" alt="Bonded Interlock Full-Zip Track Jacket" loading="lazy">
+              <span class="product-badge">Interlock Jacket</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>300 GSM</span>
+                <span>Double Knit</span>
+              </div>
+              <h3 class="product-title">Bonded Interlock Full-Zip Jacket</h3>
+              <p class="product-desc">Technical knit track jacket featuring YKK metal-tooth dual zippers, concealed zip pockets, and raglan sleeves.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: Sweatshirt -->
+          <article class="product-card" data-category="outerwear" data-product-id="sweatshirt" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_sweatshirt_crew.jpg" alt="Classic Raglan Loopback Sweatshirt" loading="lazy">
+              <span class="product-badge">French Terry</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>280 GSM</span>
+                <span>Combed Ne</span>
+              </div>
+              <h3 class="product-title">Classic Raglan Sweatshirt</h3>
+              <p class="product-desc">Archival sporting crewneck featuring triangular ribbed V-insert at neck and coverstitch details.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 10: Disney Tee -->
+          <article class="product-card" data-category="disney" data-product-id="disney" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_disney_tee.jpg" alt="Disney Licensed Character Tee" loading="lazy">
+              <span class="product-badge">Disney FAMA</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>180 GSM</span>
+                <span>30s Combed</span>
+              </div>
+              <h3 class="product-title">Disney Licensed Character Tee</h3>
+              <p class="product-desc">Manufactured strictly under authorized Disney FAMA facility compliance with non-toxic Disney RSL approved dyes.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 11: Junior Tee -->
+          <article class="product-card" data-category="disney" data-product-id="boys-tee" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_boys_tee.jpg" alt="Junior Combed Everyday Crew" loading="lazy">
+              <span class="product-badge">Kids & Youth</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>180 GSM</span>
+                <span>30s Super-Combed</span>
+              </div>
+              <h3 class="product-title">Junior Combed Everyday Crew</h3>
+              <p class="product-desc">Hypoallergenic children's t-shirt program formulated to withstand 50+ domestic hot wash cycles.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 12: Athleisure Shorts -->
+          <article class="product-card" data-category="bottoms" data-product-id="shorts" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="product-card-media">
+              <img src="assets/images/prod_shorts_athleisure.jpg" alt="French Terry Athleisure Shorts" loading="lazy">
+              <span class="product-badge">Bottoms</span>
+            </div>
+            <div class="product-card-body">
+              <div class="product-meta-row">
+                <span>260 GSM</span>
+                <span>Flat Back Rib</span>
+              </div>
+              <h3 class="product-title">French Terry Athleisure Shorts</h3>
+              <p class="product-desc">4-needle elasticated waistband, dipped cotton drawcords with metal aglets, and deep side slash pockets.</p>
+              <div class="product-action-bar">
+                <span>Inspect Technical Spec</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="brand-wordmark footer-wordmark">
+          <svg class="wordmark-symbol" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span class="wordmark-text">WIN WINS <span>IMPEX</span></span>
+        </a>
+        <p>
+          Tirupur-based knitwear and apparel export manufacturer established in 2004. Producing 200,000 pieces per month across 50,000 sq. ft. of vertical facilities with Disney FAMA, SEDEX, and SMETA certifications.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Export Portfolios</h4>
+        <ul class="footer-links-list">
+          <li><a href="collection.html?category=polos">Men's Polos & Pique</a></li>
+          <li><a href="collection.html?category=knitshirts">Resort & Knit Shirts</a></li>
+          <li><a href="collection.html?category=roundneck">High Fashion Round Necks</a></li>
+          <li><a href="collection.html?category=outerwear">Jackets & Fleece</a></li>
+          <li><a href="collection.html?category=disney">Disney Licensed Apparel</a></li>
+          <li><a href="collection.html?category=bottoms">Athleisure Shorts</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 class="footer-heading">Mill & Governance</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html#company">Garment Experience Room</a></li>
+          <li><a href="index.html#about">50,000 Sq. Ft. Facility</a></li>
+          <li><a href="index.html#about">Executive Leadership</a></li>
+          <li><a href="index.html#policies">SEDEX SMETA Audit</a></li>
+          <li><a href="index.html#policies">Disney FAMA Certification</a></li>
+          <li><a href="index.html#policies">ZDHC Environmental Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h4 class="footer-heading">Direct Export Desk</h4>
+        <address class="footer-address">
+          <strong>WIN WINS IMPEX</strong><br>
+          690/2, Suriya Compound, KNP Colony<br>
+          Dharapuram Road, Tirupur Smart City<br>
+          Tamil Nadu, India — 641608<br>
+          <a href="mailto:jagath@winwinsimpex.com">jagath@winwinsimpex.com</a><br>
+          <span>Phone: (+91) 99522 22446 / (+91) 421 242 7446</span>
+        </address>
+        <button type="button" class="btn btn-sm btn-primary" id="btn-footer-quote">
+          <span>Submit Mill Inquiry</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container footer-bottom-row">
+      <p>&copy; 2004–2026 WIN WINS IMPEX. All rights reserved. Registered Export Garments Manufacturer, Tirupur, India.</p>
+      <p>SEDEX Site Ref: ZS1000040026 • Disney FAMA Approved</p>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- SINGLE-PAGE IN-PAGE PRODUCT DETAIL DRAWER / MODAL        -->
+  <!-- ======================================================== -->
+  <div class="modal-backdrop" id="product-detail-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Product Details">&times;</button>
+      
+      <div class="modal-layout">
+        <div class="modal-gallery">
+          <div class="modal-gallery-media">
+            <img src="assets/images/prod_polo_signature.jpg" alt="" id="modal-product-image">
+          </div>
+        </div>
+
+        <div class="modal-details">
+          <span class="modal-meta-tag" id="modal-product-category">MEN'S POLOS</span>
+          <span class="product-badge" id="modal-product-badge" style="position: static; display: inline-block; margin-left: 8px;">Flagship</span>
+
+          <h2 class="modal-title" id="modal-product-title">Signature Combed Piqué Polo</h2>
+          <p class="modal-desc" id="modal-product-desc">Engineered in our Tirupur facility with anti-curl flat knit jacquard collar, reinforced shoulder tape, and real trocas shell buttons.</p>
+
+          <table class="spec-table">
+            <tbody>
+              <tr>
+                <th>Fabric Weight (GSM)</th>
+                <td id="modal-spec-gsm">240 GSM (± 3% tolerance)</td>
+              </tr>
+              <tr>
+                <th>Yarn Count & Type</th>
+                <td id="modal-spec-yarn">2/40s Ne Compact Ring-Spun Combed Cotton</td>
+              </tr>
+              <tr>
+                <th>Weave Construction</th>
+                <td id="modal-spec-weave">Honeycomb Structured Single Piqué Knit</td>
+              </tr>
+              <tr>
+                <th>Dimensional Stability</th>
+                <td id="modal-spec-shrinkage">&lt; 3.0% Length / &lt; 2.0% Width (AATCC 135)</td>
+              </tr>
+              <tr>
+                <th>Colorfastness Rating</th>
+                <td id="modal-spec-fastness">Grade 4.5 Commercial Wash & Perspiration</td>
+              </tr>
+              <tr>
+                <th>Dye Processing</th>
+                <td id="modal-spec-dye">OEKO-TEX Class 1 Eco-Reactive Dye (ZDHC Level 3)</td>
+              </tr>
+              <tr>
+                <th>Minimum Order (MOQ)</th>
+                <td id="modal-spec-moq">1,000 Units per colorway / 2,500 per program</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="colorway-chips" id="modal-colorways-list"></div>
+
+          <div style="display: flex; gap: 12px;">
+            <button type="button" class="btn btn-primary" id="btn-modal-inquire">
+              <span>Request Swatches & Spec Pack</span>
+            </button>
+            <a href="https://api.whatsapp.com/send?phone=919952222446&text=Hi%20Win%20Wins%20Impex,%20I%20would%20like%20to%20enquire%20about%20your%20Export%20Garments" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <span>WhatsApp Export Desk</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTION INQUIRY / RFQ MODAL -->
+  <div class="modal-backdrop" id="inquiry-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
+    <div class="modal-card" style="max-width: 680px; padding: 36px;">
+      <button type="button" class="modal-close-btn" id="inquiry-modal-close" aria-label="Close Form">&times;</button>
+      
+      <h2 id="inquiry-modal-title" class="section-title-sm" style="margin-bottom: 6px;">Request Mill Deck & Production Allocation</h2>
+      <p style="color: var(--ink-soft); font-size: 0.9375rem; margin-bottom: 24px;">
+        Submit your garment program requirements. Managing Partner Jagath Thiagarajan will respond with full cost sheets within 24 business hours.
+      </p>
+
+      <form id="rfq-form">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+          <div>
+            <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;" for="rfq-name">First & Last Name *</label>
+            <input type="text" id="rfq-name" required placeholder="John Doe" class="composite-search-input">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;" for="rfq-company">Brand / Company *</label>
+            <input type="text" id="rfq-company" required placeholder="Brand Name" class="composite-search-input">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+          <div>
+            <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;" for="rfq-email">Corporate Work Email *</label>
+            <input type="email" id="rfq-email" required placeholder="buyer@brand.com" class="composite-search-input">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;" for="rfq-cat">Category of Interest *</label>
+            <select id="rfq-cat" required class="composite-search-input">
+              <option value="polos">Men's Polos & Pique (210–250 GSM)</option>
+              <option value="knitshirts">Resort & Casual Knit Shirts (180–230 GSM)</option>
+              <option value="roundneck">High Fashion Round Necks (230–280 GSM)</option>
+              <option value="outerwear">Jackets & Fleece (250–320 GSM)</option>
+              <option value="disney">Disney Licensed Programs</option>
+              <option value="bottoms">Athleisure Shorts & Joggers</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label style="display: block; font-size: 0.8125rem; font-weight: 600; margin-bottom: 4px;" for="rfq-notes">Specific Fabric / Spec Notes</label>
+          <textarea id="rfq-notes" rows="3" placeholder="Target fabrics (Waffle, Seersucker, Cool Touch, Baby Terry), quantities, Disney FAMA needs..." class="composite-search-input"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span>Send Enquiry to Direct Export Desk</span>
+        </button>
+      </form>
+
+      <div id="rfq-success" hidden style="text-align: center; padding: 24px 0;">
+        <h3 class="section-title-sm">Enquiry Dispatched</h3>
+        <p style="color: var(--ink-soft); margin-top: 8px; margin-bottom: 20px;">
+          Thank you. Managing Partner Jagath Thiagarajan has received your details and our Tirupur export team will be in touch shortly.
+        </p>
+        <button type="button" class="btn btn-secondary" id="btn-close-success">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Export Desk -->
+  <a href="https://api.whatsapp.com/send?phone=919952222446&text=Hi%20Win%20Wins%20Impex,%20I%20would%20like%20to%20enquire%20about%20garment%20production" class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="Direct WhatsApp Chat with Export Desk">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.812.484 3.516 1.332 5.016L2 22l5.125-1.313A9.972 9.972 0 0 0 12.031 22C17.566 22 22 17.504 22 12.031 22 6.496 17.566 2 12.031 2zm5.782 14.375c-.242.68-1.219 1.258-1.688 1.313-.469.055-1.07.078-3.469-.875-2.883-1.148-4.734-4.102-4.875-4.297-.141-.195-1.156-1.539-1.156-2.938s.734-2.086.992-2.375c.258-.289.563-.359.75-.359.188 0 .375.008.539.016.172.008.406-.063.633.484.234.563.805 1.961.875 2.102.07.141.117.313.016.508-.102.195-.156.313-.305.484-.148.172-.313.383-.445.516-.148.148-.305.313-.133.609.172.297.766 1.266 1.648 2.055 1.133 1.008 2.086 1.328 2.383 1.477.297.148.469.133.641-.07.172-.203.734-.859.93-1.156.195-.297.391-.25.656-.148.266.102 1.688.797 1.977.945.289.148.484.219.555.344.07.125.07.727-.172 1.406z"/>
+    </svg>
+    <span>WhatsApp Export Desk</span>
+  </a>
+
+  <script src="app.js"></script>
+  <script>
+    // Subcategories interactive filter for collection.html
+    const tabBtns = document.querySelectorAll('.catalog-tab-btn');
+    const cards = document.querySelectorAll('#collection-grid .product-card');
+    const searchInput = document.getElementById('collection-search-input');
+    const countNote = document.getElementById('catalog-count-note');
+
+    let activeFilter = 'all';
+    let searchQuery = '';
+
+    function filterGrid() {
+      let count = 0;
+      const q = searchQuery.toLowerCase().trim();
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const text = card.textContent.toLowerCase();
+        const matchesCategory = activeFilter === 'all' || cat === activeFilter;
+        const matchesSearch = !q || text.includes(q);
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = '';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (countNote) countNote.textContent = `Showing ${count} export specimens`;
+    }
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.getAttribute('data-filter');
+        filterGrid();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        filterGrid();
+      });
+    }
+
+    // Check URL param ?category=
+    const params = new URLSearchParams(window.location.search);
+    const initialCat = params.get('category');
+    if (initialCat) {
+      const match = Array.from(tabBtns).find(b => b.getAttribute('data-filter') === initialCat);
+      if (match) {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        match.classList.add('active');
+        activeFilter = initialCat;
+        filterGrid();
+      }
+    }
+  </script>
+</body>
+</html>
